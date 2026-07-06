@@ -1,0 +1,172 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#080808;
+color:#fff;
+overflow-x:hidden;
+}
+
+.bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#000,#1a0000,#ff0000);
+background-size:300% 300%;
+animation:bgmove 8s infinite alternate;
+z-index:-1;
+}
+
+@keyframes bgmove{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+backdrop-filter:blur(15px);
+background:rgba(255,255,255,.05);
+position:sticky;
+top:0;
+}
+
+nav h2{
+font-size:30px;
+color:#ff2b2b;
+}
+
+nav a{
+text-decoration:none;
+background:red;
+color:#fff;
+padding:12px 30px;
+border-radius:40px;
+transition:.3s;
+}
+
+nav a:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px red;
+}
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:15px;
+text-shadow:0 0 20px red;
+}
+
+.hero p{
+font-size:22px;
+opacity:.9;
+margin-bottom:30px;
+}
+
+.btn{
+background:#ff0000;
+padding:18px 45px;
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+font-size:20px;
+transition:.4s;
+box-shadow:0 0 25px red;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 40px red;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+padding:70px 30px;
+}
+
+.card{
+width:300px;
+padding:30px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+border-radius:25px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-12px);
+box-shadow:0 0 30px rgba(255,0,0,.4);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#ff4242;
+}
+
+.counter{
+padding:70px;
+text-align:center;
+}
+
+.counter h2{
+font-size:35px;
+}
+
+.counter h1{
+font-size:80px;
+margin-top:20px;
+color:red;
+text-shadow:0 0 20px red;
+}
+
+footer{
+padding:25px;
+text-align:center;
+background:#000;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.cards{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:90%;
+}
+
+nav{
+padding:15px 5%;
+}
+
+}
